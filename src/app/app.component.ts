@@ -25,24 +25,35 @@ export class AppComponent
     AfterViewChecked
 {
   ngOnChanges() {
+    /**
+     * Called for every input change
+     */
     console.log('ngOnChanges 1');
   }
   ngOnInit() {
-    console.log('ngOnChanges 2');
+    /**
+     * Called when application is loaded
+     */
+    console.log('ngOnInit 2');
   }
   ngDoCheck() {
-    console.log('ngOnChanges 3');
+    /**
+     * called when any event occurs in the component
+     */
+    console.log('ngDoCheck 3');
   }
   ngAfterContentInit() {
-    console.log('ngOnChanges 4');
+    console.log('ngAfterContentInit 4');
   }
   ngAfterContentChecked() {
-    console.log('ngOnChanges 5');
+    // called twice
+    console.log('ngAfterContentChecked 5');
   }
   ngAfterViewInit() {
-    console.log('ngOnChanges 6');
+    console.log('ngAfterViewInit 6');
   }
   ngAfterViewChecked() {
-    console.log('ngOnChanges 7');
+    // called twice
+    console.log('ngAfterViewChecked 7');
   }
 }
